@@ -1,10 +1,18 @@
 #アプリ概要
 アンケート集計。
 
+##デモサイト
+1. https://gs-4-19-satokentaro-kadai-6.appspot.com/input_data.php
+2. https://gs-4-19-satokentaro-kadai-6.appspot.com/fputs.php
+3. https://gs-4-19-satokentaro-kadai-6.appspot.com/output_data.php
+
+###制限事項
+GoogleAppEngineを利用しているが、ファイル書き込みができないようなので、fputs.phpからの「data.csv」への書き込み動作は動作しない。
+
 ##主な機能
 
 ###input_data.php
-1. アンケート入力機能。
+1. アンケート入力機能。「fputs.php」に入力値を渡して「data.csv」に書き込み。
 2. 必須項目以外は任意。
 3. 必須項目が全て入力されると、送信ボタンがアクティブになる。
 4. 入力項目が変更されるたびにSessionStorageに保存。リロード等で再反映。
