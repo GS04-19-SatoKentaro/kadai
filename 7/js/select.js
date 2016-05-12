@@ -42,7 +42,7 @@ $(function () {
     });
 
     // Set a callback to run when the Google Visualization API is loaded.
-    google.charts.setOnLoadCallback(drawChart());
+    google.charts.setOnLoadCallback(drawChart);
 
     // Callback that creates and populates a data table,
     // instantiates the pie chart, passes in the data and
@@ -51,7 +51,6 @@ $(function () {
         // Create the data table.
         var sexNumberElements = $(".sexNumber");
         var sexNumber_male = $(sexNumberElements[0]).text();
-        console.log("sexNumber_male:" + sexNumber_male);
         var sexNumber_female = $(sexNumberElements[1]).text();
         var sexNumber_none = $(sexNumberElements[2]).text();
         sexNumber_male = parseFloat(sexNumber_male);
