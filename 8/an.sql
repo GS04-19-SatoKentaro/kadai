@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: 2016 年 5 月 19 日 23:27
+-- Generation Time: 2016 年 5 月 19 日 23:51
 -- サーバのバージョン： 5.6.21
 -- PHP Version: 5.6.3
 
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `an_table` (
   `comments` text COLLATE utf8_unicode_ci NOT NULL,
   `date` datetime NOT NULL,
   `date_updated` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='アンケートの管理用';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='アンケートの管理用';
 
 --
 -- テーブルのデータのダンプ `an_table`
@@ -53,7 +53,8 @@ INSERT INTO `an_table` (`id`, `name`, `mail`, `age`, `sex`, `postal_1`, `postal_
 (3, '河村 梨沙', 'risa_kawamura@csurynvm.jadek.tkj', 23, '女性', '960', '0735', '福島県', '伊達市梁川町鶴ケ岡3-4', '0245861560', 2, 'その他の色々なコメント。更新しました。', '2016-05-10 00:51:03', '2016-05-19 22:58:18'),
 (4, '笠井 俊二', 'shunji31913@vimyr.ed.ntm', 29, '男性', '518', '0406', '三重県', '名張市すずらん台西１番町3-17-2', '0598861175', 5, 'その他の感想やコメント。更新しました。', '2016-05-10 01:17:15', '2016-05-19 22:59:58'),
 (5, '柏木 莉央', 'rio_kashiwagi@wmtscbrwr.vq', 44, '女性', '769', '2101', '香川県', 'さぬき市志度3-16-9', '087573390', 1, 'その他の様々なコメント。更新しました。', '2016-05-10 17:47:37', '2016-05-19 23:04:46'),
-(6, '大矢 昌宏', 'masahiro00507@kkyzlphhe.hk', 58, '男性', '969', '6273', '福島県', '大沼郡会津美里町八木沢4-9-9 八木沢アパート406', '0242152270', 4, 'その他の色々な様々なコメント。更新しました。', '2016-05-10 17:51:11', '2016-05-19 23:06:12');
+(6, '大矢 昌宏', 'masahiro00507@kkyzlphhe.hk', 58, '男性', '969', '6273', '福島県', '大沼郡会津美里町八木沢4-9-9 八木沢アパート406', '0242152270', 4, 'その他の色々な様々なコメント。更新しました。', '2016-05-10 17:51:11', '2016-05-19 23:06:12'),
+(12, '田崎 日菜', 'wb=bucqhina37812@bvbumhcv.wtugq.tn', 35, '女性', '991', '0801', '山形県', '西村山郡大江町左沢4-17-6', '0237071118', 5, '色々な感想。', '2016-05-19 23:41:43', '2016-05-19 23:41:43');
 
 -- --------------------------------------------------------
 
@@ -173,7 +174,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `an_table`
 --
 ALTER TABLE `an_table`
-MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `id` int(12) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `regions`
 --
