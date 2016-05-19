@@ -2,8 +2,6 @@
 アンケート集計。
 課題7のものをベースに、アンケート内容の更新、削除、検索機能の追加。
 
-また、アンケート結果を見るログイン機能等を追加。
-
 ##デモサイト
 1. https://gs-4-19-satokentaro-kadai-8.appspot.com/index.php
 2. https://gs-4-19-satokentaro-kadai-8.appspot.com/insert.php
