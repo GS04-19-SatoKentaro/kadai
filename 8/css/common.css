@@ -1,0 +1,674 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    font: 18px 'Lucida Grande', 'Lucida Sans Unicode', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', Helvetica, Arial, Verdana, sans-serif;
+}
+
+.headerGlobal {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0.5em;
+    background: #ddd;
+    text-align: left;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.top {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.userMenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.userMenu .button {
+    margin-left: 0.5em;
+}
+
+/* index.php用 */
+
+#test {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 36px;
+    padding: 0.25em;
+    background: #4075c7;
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+fieldset {
+    background: #ddd;
+    padding: 1em;
+    border-radius: 1em;
+    text-align: left;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0.75em;
+    padding-top: 0.75em;
+    padding-bottom: 0.25em;
+    background: #fff;
+    text-align: center;
+    /*    vertical-align: bottom;*/
+    border-radius: 0.5em;
+}
+
+main {
+    /*    padding: 10px;*/
+    text-align: center;
+    /*    background-color: #800d0d;*/
+    display: flex;
+    -webkit-flex-direction: column;
+    /* Safari */
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    /* Safari */
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    /* Safari */
+    justify-content: center;
+}
+
+/*共有*/
+#suggestion {
+    margin: auto;
+    padding-top: 0.5em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    /*
+    position: absolute;
+    left: 0;
+*/
+}
+
+/*select.php用 始まり*/
+#logoutButton {
+    margin: 0.5em auto;
+}
+
+#logoutButton a {
+    margin: 0.25em -0.5em;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+}
+
+#logoutButton a:hover,
+#logoutButton:hover {
+    color: #fff;
+    background: #888;
+}
+
+#logoutButton a:active,
+#logoutButton:active {
+    background: #000;
+}
+
+
+/*select.php用 終わり*/
+
+/*login.php用 始まり*/
+.error {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff0000;
+}
+/*login.php用 終わり*/
+
+
+
+form {
+    margin: auto;
+}
+
+form p {
+    font-size: 20px;
+    vertical-align: top;
+}
+
+form p+p {
+    margin-top: 0.5em;
+}
+
+.itemName {
+    display: inline-block;
+    width: 6em;
+    text-align: right;
+    vertical-align: top;
+    padding-right: 0.25em;
+}
+
+.itemBody {
+    display: inline-block;
+    /*    width: 15em;*/
+    text-align: left;
+    /*    background: #666;*/
+}
+
+input,
+textarea,
+select{
+    color: #000;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+textarea,
+label,
+select {
+    font-size: 16px;
+    padding: 0.25em;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 18em;
+}
+
+select {
+/*    width: 18em;*/
+}
+
+input[type="number"] {
+    width: 3em;
+    /*    text-align: left;*/
+}
+
+input[type="radio"] {
+    margin-right: 0.25em;
+}
+
+p.required {
+    font-weight: bold;
+}
+
+p.required:after {
+    content: "*";
+    display: inline-block;
+    text-align: left;
+    width: 1em;
+    /*    background: #000;*/
+}
+
+.ratingImage {
+    display: inline-block;
+    margin-left: 0em;
+    color: #666;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    /* text-shadow */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.ratingImage + .ratingImage {
+    margin-left: 0.125em;
+}
+
+.ratingImageOn {
+    color: orange;
+}
+
+.radio + .radio {
+    margin-left: 0.5em;
+}
+
+.radio:hover {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0.25em 0.75em;
+    border-radius: 0.6em;
+    cursor: pointer;
+}
+
+input[type="submit"].active {
+    color: #000;
+    background: #fff;
+}
+
+input[type="submit"].inactive {
+    background: #bbb;
+}
+
+input[type="submit"].active:hover {
+    color: #fff;
+    background: #888;
+}
+
+input[type="submit"].inactive:hover {
+    cursor: auto;
+}
+
+input[type="submit"]:active {
+    /*    cursor: pointer;*/
+    /*    color: #fff;*/
+    background: #000;
+}
+
+.inactive {
+    color: #999;
+}
+
+.active {
+    color: #666;
+    border: 1px solid #000;
+}
+
+input[type="submit"].smallSubmit {
+    font-size: 15px;
+}
+
+input[type="submit"].seriousSubmit {
+    background: #f00;
+    color: #fff;
+}
+
+input[type="submit"].seriousSubmit:hover {
+    color: #fff;
+    background: #800000;
+}
+
+#deleteForm {
+    margin-top: 1em;
+    /*    border-top: 1px solid #000;*/
+}
+
+#reset {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0.25em 0.75em;
+    border-radius: 0.6em;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #000;
+    margin-bottom: 1em;
+}
+
+
+#reset:hover {
+    color: #fff;
+    background: #888;
+}
+
+#reset:active {
+    background: #000;
+}
+
+
+/*http://unitopi.com/html5-validation/*/
+/*http://unitopi.com/html5-validation-2/*/
+/*http://tutorialzine.com/2014/12/quick-tip-easy-form-validation-with-html5/*/
+
+input:invalid,
+textarea:invalid {
+    /*    border:solid 2px #F5192F;*/
+    background: #ffe0e0;
+}
+
+#submit {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.footer {
+    margin-top: 1em;
+    background: #ddd;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.button {
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    background: hsla(0, 0%, 100%, 0.2);
+    font-weight: bold;
+}
+
+.button+.button {
+    margin-left: 0.5em;
+}
+
+#loginButton a {
+    margin: 0.25em -0.5em;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+}
+
+#loginButton a:hover,
+#loginButton:hover {
+    color: #fff;
+    background: #888;
+}
+
+#loginButton a:active,
+#loginButton:active {
+    background: #000;
+}
+
+
+/* insert.php用 */
+
+.message {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#back {
+    font-size: 24px;
+    border: 1px solid #000;
+    margin: 1em auto;
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+    font-weight: bold;
+    color: #000;
+    background: #fff;
+}
+
+#back:hover,
+#back:hover a {
+    color: #fff;
+    background: #666;
+}
+
+#back:active,
+#back:active a {
+    color: #fff;
+    background: #000;
+}
+
+#back > a {
+    display: block;
+    margin: -0.5em -1em;
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+}
+
+
+/* select.php用 */
+
+section {
+/*    margin: auto;*/
+/*    margin-bottom: 1em;*/
+}
+
+#rowData {
+    margin: 0;
+}
+
+.sectionTabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0;
+}
+
+.resultTitle {
+    flex-grow:1;
+    cursor: pointer;
+    background: #ddd;
+
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #4075c7;
+    padding: 0.25em;
+}
+
+.activeTitle {
+    color: #fff;
+    background: #4075c7;
+}
+
+.activeResult {
+    display: block;
+}
+
+.resultTitle:hover {
+    color: #fff;
+    background: #2d599a;
+}
+
+.activeTitle:hover {
+    cursor:auto;
+    color: #fff;
+    background: #4075c7;
+}
+
+.resultBody {
+    display: none;
+}
+
+.activeResult {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.resultSection {
+    margin: 1em;
+    /* box-shadow */
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+#searchForm {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+#resultTable {
+    height: 25em;
+    overflow: auto;
+    background: #fff;
+    padding: 0.75em 0.75em;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    /* box-shadow */
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.3) inset;
+    -moz-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.3) inset;
+    -webkit-box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.3) inset;
+    text-align: center;
+}
+
+table {
+    border: 1px solid #000;
+    margin: auto;
+    /*    background: #fff;*/
+}
+
+td,
+th {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+th {
+    /*    position:relative;*/
+    background: #4075c7;
+    color: #fff;
+}
+
+td {
+    text-align: left;
+}
+
+.updateLink {
+    text-decoration: underline;
+}
+
+.scroll_div {
+    overflow: auto;
+}
+
+.resultSectionTitle {
+    font-size: 20px;
+/*    margin-top: 1em;*/
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #4075c7;
+}
+
+.resultSection {
+    padding: 1em;
+}
+
+.resultItemTitle {
+    font-size: 16px;
+    color: #2d599a;
+    margin-top: 0.75em;
+    margin-bottom: 0.25em;
+}
+
+.resultItem {
+    margin: auto;
+    text-align: center;
+    display: block;
+    width: 400px;
+}
+
+.resultItem ul {
+    width: 100%;
+}
+
+.resultItem li {
+/*    margin: auto;*/
+/*    background: #4075c7;*/
+/*    width: 100%;*/
+    padding: 0.25em;
+    color:#000;
+    font-weight: bold;
+    display: flex;
+    -webkit-flex-direction: row;
+    /* Safari */
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    /* Safari */
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    /* Safari */
+    justify-content: space-between;
+}
+
+.resultItem li + li {
+    margin-top: 0.5em;
+}
+
+.resultItemText {
+    font-weight: bold;
+}
+.resultItemText li {
+    font-size: 16px;
+}
+#ratingResult {
+    font-size: 24px;
+    display: block;
+    font-weight: bold;
+}
+
+.ratingImageResult {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 0em;
+    color: #666;
+    /* text-shadow */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.ratingImageResult + .ratingImageResult {
+    margin-left: 0.125em;
+}
+
+.ratingImageResultOn {
+    color: orange;
+}
+
+.ratingBar {
+    text-align: left;
+}
+
+.ratingLabel,.ratingParcentage,.ratingNumber {
+    display: block;
+}
+.ratingLabel {
+    text-align: left;
+    width:4em;
+}
+.ratingParcentage {
+    text-align: left;
+    width:3em;
+}
+.ratingParcentage {
+    text-align: left;
+    width:3em;
+}
+
+.ratingParcentageBar {
+    display: flex;
+    -webkit-flex-direction: row;
+    /* Safari */
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    /* Safari */
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    /* Safari */
+    justify-content: flex-start;
+    width:50%;
+    text-align: left;
+    border: 1px solid #4075c7;
+}
+.bar {
+    background: #4075c7;
+    display: block;
+/*    width:60%;*/
+    margin: 0;
+}
