@@ -142,11 +142,18 @@ $ratingAverage = getRatingAverage($ratings);
             <div class="top"><a href="./">My questionnaire</a></div>
             <div class="userMenu">
                 ログインユーザー名：
-                <?=h($_SESSION['username']);?> 
+                <?=h($_SESSION['username']);?>
                 <div class="button" id="loginButton"><a href="./logout.php">Logout</a></div>
             </div>
         </header>
         <h1>アンケート結果</h1>
+        <form id = "searchForm" name="searchForm" action="./select.php" method="get">
+            <p>
+            <span class="itemName">キーワード</span>
+                <span class="itemBody"><input id="keywordBox" type="text" name="keyword" size="20" value="<?=h($keyword);?>"></span>
+            <input class="active smallSubmit" type="submit" name="search" value="絞り込み検索">
+            </p>
+        </form>
         <main>
             <ul class="sectionTabs">
                 <li class="resultTitle activeTitle">アンケート結果の一覧</li>
@@ -154,13 +161,6 @@ $ratingAverage = getRatingAverage($ratings);
             </ul>
             <section id="rowData" class="resultBody activeResult">
                 <!--                http://php5.seesaa.net/category/4135047-1.html-->
-                <form id = "searchForm" name="searchForm" action="./select.php" method="get">
-                    <p>
-                    <span class="itemName">キーワード</span>
-                        <span class="itemBody"><input id="keywordBox" type="text" name="keyword" size="20" value="<?=h($keyword);?>"></span>
-                    <input class="active smallSubmit" type="submit" name="search" value="検索">
-                    </p>
-                </form>
                 <div id="resultTable" class="scroll_div">
                     <table data-fixedhead="rows:1; cols:1">
                     <thead><tr><th>ID</th><th>名前</th><th>メールアドレス</th><th>年齢</th><th>性別</th><th>郵便番号</th><th>都道府県</th><th>住所</th><th>電話番号</th><th>評価</th><th>コメント</th><th>送信日時</th><th>更新日時</th></tr></thead>

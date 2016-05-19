@@ -78,7 +78,13 @@ header('X-FRAME-OPTIONS: SAMEORIGIN');
         $array = array($name, $mail, $age, $sex, $postal_1, $postal_2, $region, $address, $tel, $rating, $comments);
 
 
-        $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost', 'root', '');
+        require_once './lib/connectdb.php';
+        //try {
+        //  $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost','root','');
+        //} catch (PDOException $e) {
+        //  exit('DbConnectError:'.$e->getMessage());
+        //}
+
         //データ登録SQL作成
         $stmt = $pdo->prepare("INSERT INTO an_table (id, name, mail, age, sex, postal_1, postal_2, region, address, tel, rating, comments, date, date_updated)
         VALUES( NULL, :a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10, :a11, sysdate(), sysdate() )");

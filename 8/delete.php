@@ -26,7 +26,13 @@ header('X-FRAME-OPTIONS: SAMEORIGIN');
 
         $id = $_POST["id"];
 
-        $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost', 'root', '');
+        require_once './lib/connectdb.php';
+        //try {
+        //  $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost','root','');
+        //} catch (PDOException $e) {
+        //  exit('DbConnectError:'.$e->getMessage());
+        //}
+
         //データ登録SQL作成
         $stmt = $pdo->prepare("DELETE FROM an_table WHERE id=:id");
         $stmt->bindValue(':id', $id);

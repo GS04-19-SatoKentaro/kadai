@@ -28,9 +28,15 @@ if (!isset($_SESSION['auth'])) {
 if (isset($_POST['userid']) && isset($_POST['password'])) {
     $useridInputed = $_POST['userid'];
     $passwordInputed = $_POST['password'];
-    
+
     //1. DB接続します
-    $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost', 'root', ''); //セミコロンは区切り
+    require_once './lib/connectdb.php';
+    //try {
+    //  $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost','root','');
+    //} catch (PDOException $e) {
+    //  exit('DbConnectError:'.$e->getMessage());
+    //}
+
     //プリペアドステートメントのエミュレーションの無効化
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     //2. データ取得SQL作成

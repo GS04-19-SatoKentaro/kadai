@@ -53,7 +53,13 @@ if ($allDataInputed) {
 
     try {
         //1. DB接続します
-        $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost', 'root', ''); //セミコロンは区切り
+        require_once './lib/connectdb.php';
+        //try {
+        //  $pdo = new PDO('mysql:dbname=an;charset=utf8;host=localhost','root','');
+        //} catch (PDOException $e) {
+        //  exit('DbConnectError:'.$e->getMessage());
+        //}
+
         //プリペアドステートメントのエミュレーションの無効化
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
         //エラーが発生した場合、例外がスローされるようにする。
@@ -72,14 +78,14 @@ if ($allDataInputed) {
             if ($result) {
                 $error = 'このメールアドレスはすでに登録済です。';
             } else {
-                
+
                 # ハッシュ処理の計算コストを指定します。ソルトは自動生成とします。
                 $options = array('cost' => 10);
                 # ハッシュ化方式にPASSWORD_DEFAULTを指定し、パスワードをハッシュ化します。
                 $passwordInputedHashed = password_hash($passwordInputed, PASSWORD_DEFAULT, $options);
 
                 //登録情報書き込み用のSQL作成
-                $stmt = $pdo->prepare("INSERT INTO users (id, name, mail, password, date_added, date_updated) 
+                $stmt = $pdo->prepare("INSERT INTO users (id, name, mail, password, date_added, date_updated)
                 VALUES( NULL, :name, :userid, :password, sysdate(), sysdate() )");
                 $stmt->bindValue(':name', $usernameInputed);
                 $stmt->bindValue(':userid', $useridInputed);
