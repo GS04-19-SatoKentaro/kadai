@@ -3,7 +3,7 @@
 課題8のものをベースに、ユーザー情報の更新、削除、検索機能の追加。
 
 ##デモサイト
-https://gs-4-19-satokentaro-kadai-8.appspot.com/index.php
+https://gs-4-19-satokentaro-kadai-9.appspot.com/
 
 ###制限事項
 GoogleAppEngineを利用。デモサイトのものは、データベースへの接続まわりのコードはGoogle Cloud SQLに合わせて多少記述を変更。
